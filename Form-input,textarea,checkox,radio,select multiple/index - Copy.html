@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebProg.ir</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <form>
+            <label>Name</label>
+            <input v-model="formData.name" type="text">
+            <hr>
+            <label>Message</label>
+            <textarea v-model="formData.message" rows="5"></textarea>
+            <hr>
+
+            <label>checkbox1</label>
+            <input v-model="formData.checkbox" value="ch1" type="checkbox">
+
+            <label>checkbox2</label>
+            <input v-model="formData.checkbox" value="ch2" type="checkbox">
+
+            <hr>
+
+
+            <label>radio1</label>
+            <input v-model="formData.radio" value="radio1" type="radio">
+
+            <label>radio2</label>
+            <input v-model="formData.radio" value="radio2" type="radio">
+
+            <hr>
+
+            <select v-model="formData.lang">
+                <option v-for="(lang , index) in langs" :key="index">{{ lang }}</option>
+            </select>
+            <h3>select is : {{ formData.lang }}</h3>
+            <hr>
+            <button @click.prevent="submitForm">submit</button>
+        </form>
+
+    </div>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="./js/main - Copy.js"></script>
+</body>
+
+</html>
